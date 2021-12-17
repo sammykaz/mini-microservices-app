@@ -53,7 +53,7 @@ app.listen(4002, async () => {
   console.log('Listening on PORT 4002');
 
   //When the query service is down and it comes back up
-  const res = await axios.get('http://localhost:4005/events'); //Get the events that occured in the past and weren't processed
+  const res = await axios.get('http://event-bus-srv:4005/events'); //Get the events that occured in the past and weren't processed
 
   for (let event of res.data) {
     console.log('Processing event: ', event.type);
