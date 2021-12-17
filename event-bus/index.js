@@ -15,9 +15,9 @@ app.post('/events', (req, res) => {
 
   //Assuming all these always succeed.
   axios.post('http://posts-srv:4000/events', event); //Post Service
-  // axios.post('http://localhost:4001/events', event); //Comment Service
-  // axios.post('http://localhost:4002/events', event); //Query Service
-  // axios.post('http://localhost:4003/events', event); //Moderation Service
+  axios.post('http://comments-srv:4001/events', event); //Comment Service
+  axios.post('http://query-srv:4002/events', event); //Query Service
+  axios.post('http://moderation-srv:4003/events', event); //Moderation Service
 
   res.send({ status: 'OK' });
 });
