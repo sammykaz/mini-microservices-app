@@ -7,7 +7,7 @@ const PostList = () => {
   const [posts, setPosts] = useState({});
 
   const fetchPosts = async () => {
-    const res = await axios.get("http://localhost:4002/posts"); //Use QueryService instead of Post Service for querying //http://localhost:4000/posts
+    const res = await axios.get("http://posts.com/posts"); //Use QueryService instead of Post Service for querying //http://localhost:4000/posts
     setPosts(res.data);
   };
 
